@@ -18,6 +18,10 @@ jupyter labextension install @jupyterlab/toc --no-build
 echo "Installing jupyterlab language server protocol extension"
 jupyter labextension install @krassowski/jupyterlab-lsp --no-build
 
+# install tqdm notebook extension
+jupyter nbextension enable --py widgetsnbextension
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+
 # build jupyter lab for extensions to take effect
 echo "Building jupyterlab with new extensions... this will take some time"
 jupyter lab build

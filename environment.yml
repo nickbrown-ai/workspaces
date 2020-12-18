@@ -5,8 +5,10 @@ channels:
 dependencies:
   - pip=20.1.1
   - pip:
+    - ipywidgets
     - jupyter-lsp
     - python-language-server[all]
     - plotly==4.14.1
+    - tqdm
     - jupyter-dash
     - fastai
