@@ -2,7 +2,7 @@ echo "Installing additional jupyterlab extensions"
 # install plotly extensions
 echo "Installing jupyterlab plotly extensions"
 export NODE_OPTIONS=--max-old-space-size=4096
-export PLOTLY_VERSION=4.8.1
+export PLOTLY_VERSION=4.14.1
 jupyter labextension install "jupyterlab-plotly@${PLOTLY_VERSION}" --no-build
 jupyter labextension install "@jupyter-widgets/jupyterlab-manager" "plotlywidget@${PLOTLY_VERSION}" --no-build
 
