@@ -18,5 +18,4 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 # build jupyter lab for extensions to take effect
 echo "Building jupyterlab with new extensions... this will take some time"
 jupyter lab build
-unset NODE_OPTIONS
 echo "Successfully installed extensions"
