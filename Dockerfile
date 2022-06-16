@@ -1,4 +1,5 @@
-FROM jupyter/scipy-notebook:latest
+ARG JUPYTER_STACKS_TAG=lab-3.4.2
+FROM jupyter/scipy-notebook:$JUPYTER_STACKS_TAG
 
 LABEL maintainer="Nick Brown"
 
