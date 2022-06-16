@@ -11,6 +11,7 @@ ARG JUPYTER_CONFIG_FILE_PATH=/home/jovyan/.jupyter/lab/user-settings/@jupyterlab
 COPY $JUPYTER_EXTENSIONS /tmp/ 
 COPY $THEME_FILE $JUPYTER_CONFIG_FILE_PATH
 COPY environment.yml /tmp
+COPY kernel.json /opt/conda/share/jupyter/kernels/python3/
 
 USER root
 
