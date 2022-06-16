@@ -27,7 +27,7 @@ conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 cudatoolkit-dev=11.2
 nvcc -V
 ```
 
-Finally, you just need to have this conda env active when we run the docker run command. Something like this:
+Finally, you just need to have this conda env active when we run the docker run command. Obviously you will need your container to have some additional packages inside your container that match the host drivers and stuffs. To run it, the command is something like this:
 
 ```shell
 sudo docker run -ti -p 8888:8888 --user root -e GRANT_SUDO=yes --gpus all jupyter/scipy-notebook:lab-3.4.2
