@@ -1,0 +1,13 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip:
+    - ipywidgets>=7.6
+    - jupyter-lsp
+    - python-language-server[all]
+    - plotly==5.8.2
+    - tqdm
+    - jupyter-dash
