@@ -1,6 +1,7 @@
 name: base
 channels:
   - conda-forge
+  - rapidsai
   - defaults
 dependencies:
   - pip=22.1.1
@@ -15,4 +16,4 @@ dependencies:
     - tqdm
     - jupyter-dash
     - tensorflow~=2.9
-    - rapids~=22.
+    - rapids~=22.04

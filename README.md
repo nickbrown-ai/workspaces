@@ -35,4 +35,4 @@ sudo docker run -ti -p 8888:8888 --user root -e GRANT_SUDO=yes --gpus all jupyte
 
 Wow! Such work, much success! 
 
-![Doge Reward](Original_Doge_meme.jpg)
+![Doge Reward](./media/Original_Doge_meme.jpg)
