@@ -1,11 +1,13 @@
 name: base
 channels:
   - conda-forge
+  - rapidsai
   - defaults
 dependencies:
   - pip=22.1.1
   - cudatoolkit=11.2
   - cudnn=8.1.0
+  - python=3.9
   - pip:
     - ipywidgets>=7.6
     - jupyter-lsp
@@ -13,3 +15,5 @@ dependencies:
     - plotly==5.8.2
     - tqdm
     - jupyter-dash
+    - tensorflow~=2.9
+    - rapids~=22.04
