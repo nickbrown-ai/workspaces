@@ -1,4 +1,4 @@
-ARG JUPYTER_STACKS_TAG=lab-3.4.2
+ARG JUPYTER_STACKS_TAG=python-3.9.13
 FROM jupyter/scipy-notebook:$JUPYTER_STACKS_TAG
 
 LABEL maintainer="Nick Brown"

@@ -1,4 +1,4 @@
-name: base-build
+name: tensorflow-build
 
 on:
   push:
@@ -27,6 +27,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./images/base
+          context: ./images/tensorflow
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/base:${{ github.run_id }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tensorflow-gpu:${{ github.run_id }}
