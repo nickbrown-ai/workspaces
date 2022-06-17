@@ -9,6 +9,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -25,7 +27,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
-          file: ./images/tensorflow/Dockerfile
+          context: ./images/tensorflow
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gpu-tensorflow:${{ github.run_id }}
