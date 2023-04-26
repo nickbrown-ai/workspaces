@@ -4,20 +4,21 @@ channels:
   - rapidsai
   - defaults
   - pytorch
+  - nvidia
 dependencies:
-  - pip=22.1.1
-  - cudatoolkit=11.3
-  - python=3.9
+  - cudatoolkit=11.7
+  - cudatoolkit-dev=11.7
+  - pytorch-cuda=11.7
   - pytorch
   - torchvision
   - torchaudio
   - torchdata
   - torchtext
   - pip:
-    - ipywidgets>=7.6
+    - ipywidgets
     - jupyter-lsp
     - python-language-server[all]
-    - plotly==5.8.2
+    - plotly
     - tqdm
     - jupyter-dash
-    - rapids~=22.04
+    - modin

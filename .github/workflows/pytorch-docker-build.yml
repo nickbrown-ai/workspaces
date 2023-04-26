@@ -1,4 +1,4 @@
-name: tensorflow-build
+name: pytorch-build
 
 on:
   push:
@@ -27,6 +27,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./images/tensorflow
+          context: ./images/pytorch
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tensorflow-gpu:${{ github.run_id }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:${{ github.run_id }}
