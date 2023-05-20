@@ -9,7 +9,7 @@
  "display_name": "Python 3 (ipykernel)",
  "language": "python",
  "env": {
-  "LD_LIBRARY_PATH": ":/opt/conda/lib/",
+  "LD_LIBRARY_PATH": "/opt/conda/lib/",
   "TF_CPP_MIN_LOG_LEVEL": "3"
  }
 }

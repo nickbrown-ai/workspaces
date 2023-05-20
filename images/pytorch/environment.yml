@@ -1,24 +1,23 @@
 name: base
 channels:
   - conda-forge
-  - rapidsai
   - defaults
-  - pytorch
   - nvidia
 dependencies:
   - cudatoolkit=11.7
   - cudatoolkit-dev=11.7
-  - pytorch-cuda=11.7
-  - pytorch
-  - torchvision
-  - torchaudio
-  - torchdata
-  - torchtext
+  - pip
   - pip:
     - ipywidgets
     - jupyter-lsp
+    - jupyterlab-lsp
     - python-language-server[all]
     - plotly
     - tqdm
     - jupyter-dash
+    - torch
+    - torchvision
+    - torchaudio
+    - torchdata
+    - torchtext
     - modin
