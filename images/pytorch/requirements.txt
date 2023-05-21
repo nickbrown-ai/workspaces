@@ -1,0 +1,14 @@
+ipywidgets
+jupyter-lsp
+jupyterlab-lsp
+python-language-server[all]
+plotly
+tqdm
+jupyter-dash
+torch
+torchvision
+torchaudio
+torchdata
+torchtext
+modin
+

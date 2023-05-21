@@ -6,18 +6,3 @@ channels:
 dependencies:
   - cudatoolkit=11.7
   - cudatoolkit-dev=11.7
-  - pip
-  - pip:
-    - ipywidgets
-    - jupyter-lsp
-    - jupyterlab-lsp
-    - python-language-server[all]
-    - plotly
-    - tqdm
-    - jupyter-dash
-    - torch
-    - torchvision
-    - torchaudio
-    - torchdata
-    - torchtext
-    - modin
