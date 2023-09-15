@@ -5,8 +5,11 @@ LABEL maintainer="Nick Brown"
 
 USER root
 
-RUN apt-get update && apt-get install -y libxml2 gcc && \
-    rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    curl \
+    gcc \
+    libxml2  \
+    && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 
 ARG CONFIG_DIR_PATH=.jupyter/lab/user-settings
 COPY ./jupyter-user-settings /home/jovyan/${CONFIG_DIR_PATH}
