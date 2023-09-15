@@ -19,6 +19,13 @@ RUN conda env update -n base --file /tmp/environment.yml && \
     conda clean --all -f -y && \
     rm /tmp/environment.yml
 
+ARG EVCXR_VERSION=0.15.1
+
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y && \
+    ENV PATH="/root/.cargo/bin:${PATH}" && \
+    cargo install evcxr_jupyter --version $EVCXR_VERSION && \
+    evcxr_jupyter --install
+
 # split conda from pip for docker caching benefits
 RUN pip install -r /tmp/requirements.txt && \
     jupyter labextension disable "@jupyterlab/apputils-extension:announcements" && \

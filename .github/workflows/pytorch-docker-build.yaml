@@ -1,0 +1,25 @@
+name: pytorch-build
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on:
+      labels: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to DockerHub
+        run: |
+          docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKER_ACCESS_TOKEN }}
+
+      - name: Build and push final Docker image
+        run: |
+          docker buildx build ./images/pytorch \
+            --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:${{ github.run_id }}
+            --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:latest \
+            --push
