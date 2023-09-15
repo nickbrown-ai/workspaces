@@ -24,7 +24,7 @@ RUN conda env update -n base --file /tmp/environment.yml && \
 
 ARG EVCXR_VERSION=0.15.1
 
-ENV PATH="/root/.cargo/bin:${PATH}"
+ENV PATH="${HOME}/.cargo/bin:${PATH}"
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y && \
     cargo install evcxr_jupyter --version $EVCXR_VERSION && \
     evcxr_jupyter --install
