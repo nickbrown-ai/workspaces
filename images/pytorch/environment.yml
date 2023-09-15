@@ -4,5 +4,5 @@ channels:
   - defaults
   - nvidia
 dependencies:
-  - cudatoolkit=11.8
-  - cudatoolkit-dev=11.8
+  - cudatoolkit=11.7
+  - cudatoolkit-dev=11.7
