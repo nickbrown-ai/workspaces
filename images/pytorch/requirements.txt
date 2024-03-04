@@ -6,12 +6,13 @@
 --extra-index-url https://download.pytorch.org/whl/cu121
 
 # Packages
+jupyterlab>=4.1.0,<5.0.0a0
 ipywidgets
-jupyter-lsp
 jupyterlab-lsp
-python-language-server[all]
+python-lsp-server[all]
 dash
 plotly
+modin
 tqdm
 torch~=2.2.1
 torchvision
@@ -20,4 +21,3 @@ torchdata
 torchtext
 bitsandbytes
 transformers
-modin
