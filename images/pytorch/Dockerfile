@@ -10,7 +10,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 USER root
 
 RUN apt-get update && apt-get install -y \
-    build-essentials \
+    build-essential \
     cmake \
     libxml2  \
     && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
