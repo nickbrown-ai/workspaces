@@ -1,5 +1,11 @@
--i https://pypi.nvidia.com
--i https://download.pytorch.org/whl/cu121
+# Primary index (PyPI)
+-i https://pypi.org/simple
+
+# Additional indexes
+--extra-index-url https://pypi.nvidia.com
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Packages
 ipywidgets
 jupyter-lsp
 jupyterlab-lsp
