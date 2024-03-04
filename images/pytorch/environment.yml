@@ -1,8 +1,0 @@
-name: base
-channels:
-  - conda-forge
-  - defaults
-  - nvidia
-dependencies:
-  - cudatoolkit=11.7
-  - cudatoolkit-dev=11.7
