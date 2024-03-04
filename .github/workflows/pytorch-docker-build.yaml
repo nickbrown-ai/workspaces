@@ -20,6 +20,6 @@ jobs:
       - name: Build and push final Docker image
         run: |
           docker buildx build ./images/pytorch \
-            --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:${{ github.run_id }}
+            --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:${{ github.run_id }} \
             --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:latest \
             --push

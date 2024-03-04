@@ -10,9 +10,9 @@ ipywidgets
 jupyter-lsp
 jupyterlab-lsp
 python-language-server[all]
+dash
 plotly
 tqdm
-jupyter-dash
 torch~=2.2.1
 torchvision
 torchaudio
