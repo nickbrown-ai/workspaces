@@ -19,7 +19,7 @@ jobs:
 
       - name: Build and push final Docker image
         run: |
-          docker buildx build ./images/pytorch \
+          docker buildx build --platform=linux/amd64,linux/arm64 ./images/pytorch \
             --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:${{ github.run_id }} \
             --tag ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-pytorch-gpu:latest \
             --push
